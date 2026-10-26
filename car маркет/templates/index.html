@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цифровой Авторынок</title>
+    <!-- Исправленный путь через шаблонизатор Flask -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">🚗 <span>Цифровой Авторынок</span></div>
+            <nav>
+    <button class="nav-btn" onclick="toggleModal('garageModal')">Гараж (<span id="garage-count">0</span>)</button>
+    <button class="nav-btn profile-btn" id="profile-nav-btn" onclick="toggleModal('profileModal')">Вход / Профиль</button>
+            </nav>
+       </div>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Добавить объявление</h2>
+            <form id="carForm">
+                <input type="text" id="brand" placeholder="Марка (напр. Toyota)" required>
+                <input type="text" id="model" placeholder="Модель (напр. Camry)" required>
+                <input type="number" id="year" placeholder="Год выпуска" required>
+                <input type="number" id="price" placeholder="Цена ($)" required>
+                <input type="url" id="image" placeholder="Ссылка на фото авто">
+                <button type="submit" class="btn-primary">Разместить авто</button>
+            </form>
+        </section>
+
+        <section class="catalog-section">
+            <h2>Доступные автомобили</h2>
+            <div id="carsContainer" class="cars-grid"></div>
+        </section>
+    </main>
+
+    <div id="garageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('garageModal')">&times;</span>
+            <h2>💼 Отложенные автомобили</h2>
+            <div id="garageItems" class="modal-list">
+                <p class="empty-text">Вы еще не отложили ни одного автомобиля.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal('profileModal')">&times;</span>
+            <div id="profile-view-anonymous">
+                <h2>👤 Регистрация на Авторынке</h2>
+                <form id="authForm">
+                    <input type="text" id="auth-username" placeholder="Ваше Имя" required>
+                    <input type="tel" id="auth-phone" placeholder="Номер телефона" required>
+                    <button type="submit" class="btn-primary">Сохранить профиль</button>
+                </form>
+            </div>
+            <div id="profile-view-logged" style="display: none;">
+                <h2>Личный кабинет</h2>
+                <p>Приветствуем, <strong id="user-display-name"></strong>!</p>
+                <p>Ваш телефон: <span id="user-display-phone"></span></p>
+                <button onclick="logout()" class="btn-danger">Выйти из профиля</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dealModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close" onclick="toggleModal('dealModal')">&times;</span>
+            <div class="success-icon">🤝</div>
+            <h2>Связаться с владельцем</h2>
+            <p>Вы выбрали автомобиль: <strong id="deal-car-name"></strong></p>
+            <div class="dealer-card">
+                <p>👤 Менеджер по продажам: <strong id="deal-seller-name"></strong></p>
+                <p>📞 Телефон: <a id="deal-seller-phone" class="phone-link"></a></p>
+            </div>
+            <p class="hint-text">Пожалуйста, сошлитесь на «Цифровой Авторынок» при звонке.</p>
+        </div>
+    </div>
+
+    <!-- Исправленный путь к скрипту через шаблонизатор Flask -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "id": 1,
+    "brand": "Toyota",
+    "model": "Camry",
+    "year": 2024,
+    "price": 35000,
+    "image": "https://unsplash.com"
+  },
+  {
+    "id": 2,
+    "brand": "BMW",
+    "model": "M5",
+    "year": 2025,
+    "price": 95000,
+    "image": "https://unsplash.com"
+  }
+]

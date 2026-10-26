@@ -1,0 +1,32 @@
+[
+    {
+        "brand": "Hyundai ",
+        "model": "Solaris",
+        "year": 2019,
+        "price": 8500,
+        "image": "https://s.nomerogram.ru/photo/2I89l2_sddhmwdTnPHpq0yPuJWtqtGOqEMEGcU2RFqjnIdOgMb_UQ6SfwgbWKwtPgKd0EkfjXDfQrQTOjzyQ.jpg",
+        "id": 1,
+        "seller": "Namazov Yunis",
+        "phone": "89998265757"
+    },
+    {
+        "brand": "Toyota",
+        "model": "Highlander",
+        "year": 2013,
+        "price": 14500,
+        "image": "https://s.nomerogram.ru/photo/S07rQtF2xXqCVWRqZfzrFlhdI0gWgrHVfdgtrnYijz9ZGEk_5xMihfmpjBDLvPVrV_fFTm8Ky3PbdJkZxIgH.jpg",
+        "id": 2,
+        "seller": "Marku Marius",
+        "phone": "89999226570"
+    },
+    {
+        "brand": "BMW",
+        "model": "3-series",
+        "year": 2008,
+        "price": 10000,
+        "image": "https://s.nomerogram.ru/photo/qzzJyjR3Gnn8vctVVnQ3hFENoJFT6pVs2iIS9nVDZ0z2NqDpqDPDptYtgWNANijbb39U1g_AmwpKec1DP_7CZR1NtQ.jpg",
+        "id": 3,
+        "seller": "Namazov Yunis",
+        "phone": "89998265757"
+    }
+]
